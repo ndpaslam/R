@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .contact-container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .contact-info p {
+            margin: 10px 0;
+            color: #666;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-info a:hover {
+            color: #0056b3;
+        }
+        .back-to-home {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .back-to-home button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .back-to-home button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <div class="contact-info">
+            <p>Feel free to reach out:</p>
+            <p>Email: <a href="mailto:aslamnadhif596@gmail.com">Click to message me</a></p>
+            <p>Phone: <a href="tel:+6285893523975">Click to my number</a></p>
+            <p>Follow me on <a href="https://www.instagram.com/jojobobodulu">Instagram</a></p>
+        </div>
+        <div class="back-to-home">
+            <button onclick="goToHomePage()">Back to Home</button>
+        </div>
+    </div>
+
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html"; // Ganti "index.html" dengan halaman awal Anda
+        }
+    </script>
+</body>
+</html>

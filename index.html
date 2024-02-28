@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Personal Website | Responsive Portfolio</title>
+    <style>
+        /* Gaya CSS Anda di sini */
+
+        /* Gaya untuk footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+    <script>
+        // Fungsi untuk menambahkan angka 0 di depan angka satu digit
+        function addZero(num) {
+            return (num < 10 ? "0" : "") + num;
+        }
+
+        // Fungsi untuk memperbarui jam dan tanggal setiap detik
+        function updateClock() {
+            const now = new Date();
+            const hours = addZero(now.getHours());
+            const minutes = addZero(now.getMinutes());
+            const seconds = addZero(now.getSeconds());
+            const day = addZero(now.getDate());
+            const month = addZero(now.getMonth() + 1); // Penambahan 1 karena indeks bulan dimulai dari 0
+            const year = now.getFullYear();
+            const dateString = day + "/" + month + "/" + year;
+            const timeString = hours + ":" + minutes + ":" + seconds;
+            document.getElementById("clock").textContent = timeString;
+            document.getElementById("date").textContent = dateString;
+        }
+
+        // Panggil fungsi updateClock() setiap detik
+        setInterval(updateClock, 1000);
+
+        // Panggil fungsi updateClock() untuk pertama kali saat halaman dimuat
+        updateClock();
+    </script>
+</head>
+<body>
+    <nav>
+      <div class="nav__content">
+        <div class="clock-date">
+            <div id="clock"></div> <!-- Jam -->
+            <div id="date"></div> <!-- Tanggal -->
+        </div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">Hello!</p>
+          <h1 class="title">
+            I'm <span>Nadhif<br />a</span> Web Developer
+          </h1>
+          <p class="description">
+            Welcome to my web developer portfolio! I'm Nadhif, a skilled and
+            creative web developer with a passion for creating beautiful,
+            responsive, and user-friendly websites. I've worked on a variety of
+            web projects, ranging from personal blogs to e-commerce platforms.
+          </p>
+          <div class="action__btns">
+            <button class=".hire__me">Hire Me</button>
+            <button class="portfolio">Portfolio</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="assets/profile.jpg" alt="jgn didownload y" />
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="footer__content">
+            <p>&copy; 2024 Nadhif Aslam. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
